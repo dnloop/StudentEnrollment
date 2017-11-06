@@ -19,6 +19,7 @@ package motor;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -63,7 +64,7 @@ public class Conector {
         this.pass= pass;
     } // remote
     
-    /* Getters & Setters */
+   /* Getters & Setters */
 
     public String getUrl() {
         return url;
@@ -151,4 +152,8 @@ public class Conector {
     static Statement createStatement() {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
+    
+    public PreparedStatement prepareStatement(String sql) {
+        throw new UnsupportedOperationException("prepareStatemet exception.");
+    } // Consulta parametrizada me trae problemas, hoy no es el dia.
 }

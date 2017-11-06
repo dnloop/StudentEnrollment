@@ -73,7 +73,7 @@ public class Consulta extends Conector{
         /* Extraer numero de columnas */
         ResultSetMetaData metaData = objResultSet.getMetaData();
         int numCol = metaData.getColumnCount();
-        /***/
+        
         if (objResultSet.isBeforeFirst()) {
             while(objResultSet.next()){
                  Object [] columna = new Object[numCol];
